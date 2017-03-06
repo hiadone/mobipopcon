@@ -254,6 +254,10 @@ class Managelayout extends CI_Controller
             $CI->load->library('popuplib');
             $data['popup'] = $CI->popuplib->display_popup();
 
+        } else {
+            // 메뉴관리
+            $CI->load->model('Menu_model');
+            $data['menu'] = $CI->Menu_model->get_all_menu($device_view_type);
         }
 
         return $data;
