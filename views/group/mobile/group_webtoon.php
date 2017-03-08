@@ -33,7 +33,7 @@ if (element('board_list', $view)) {
         $href_url='url';
 
         if(strpos(element('brd_key', $board),'webtoon_1') !== false) {
-            $limit=5;
+            $limit=4;
             $css='imglist';
             
         }

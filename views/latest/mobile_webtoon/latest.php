@@ -14,21 +14,14 @@ if(element('css', $view) =='imglist'){
  ?>
 
 
-<section class="<?php echo element('css', $view)?> webtoon" id="<?php echo element('sectionId', $view)?>">
-    <h2>
-    <?php 
-        if(html_escape(element('board_name', element('board', $view)))=='전체') echo '';
-        else echo html_escape(element('board_name', element('board', $view)));
-    ?> 
-    
+<section class="<?php echo element('css', $view)?> webtoon" id="<?php echo element('sectionId', $view)?>">    
         <?php 
         if(element('css', $view) =='swip_menu'){
-         ?>
-        
-       <span><a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기 ></a></span> 
 
+            echo "<h2>".html_escape(element('board_name', element('board', $view)));
+         ?>
+       <span><a href="<?php echo board_url(element('brd_key', element('board', $view))); ?>" title="<?php echo html_escape(element('board_name', element('board', $view))); ?>">더보기 ></a></span></h2> 
         <?php } ?>
-    </h2>
        <nav>
             <ul>
             <?php
