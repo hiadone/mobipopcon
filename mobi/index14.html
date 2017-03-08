@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<!--로딩시 대메뉴의 스크롤바 위치-->
+<script>
+$(document).ready
+$(function(){
+ var position = $('.main ul li:last-child').offset(); //위치값(#container 의 스크롤바위치값을 변수로 지정함)	
+ 	$('html, body').animate({scrollTop : 0});
+	$('.main').animate({scrollLeft : position.left})
+});
+</script>
+<!-- -->
+
+<!-- 드롭메뉴 -->
+<script>
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+<!-- -->
+<!-- 리스트 정렬 -->
+<script>
+        $.fn.alternateRowColors = function() {
+            $('tbody tr:odd', this).removeClass('even').addClass('odd');
+            $('tbody tr:even', this).removeClass('odd').addClass('even');
+            return this;
+        };
+ 
+        $(document).ready(function() {
+            $('table.td').each(function() {
+                var $table = $(this);
+                // 플러그인 호출
+                $table.alternateRowColors();
+ 
+                // 테이블 헤더 정렬
+                $('th', $table).each(function(column) {
+                    // 헤더의 CSS 클래스가 sort-alpha로 설정되어있다면, ABC순으로 정렬
+                    if ($(this).is('.sort-alpha')) {
+                        // 클릭시 정렬 실행
+                        var direction = -1;
+                        $(this).click(function() {
+                            direction = -direction;
+                            var rows = $table.find('tbody > tr').get(); // 현재 선택된 헤더관련 행 가져오기
+                            // 자바스크립트의 sort 함수를 사용해서 오름차순 정렬
+                            rows.sort(function(a, b) {
+                                var keyA = $(a).children('td').eq(column).text().toUpperCase();
+                                var keyB = $(b).children('td').eq(column).text().toUpperCase();
+ 
+                                if (keyA < keyB) return -direction;
+                                if (keyA > keyB) return direction;
+                                return 0;
+                            });
+                            //정렬된 행을 테이블에 추가
+                            $.each(rows, function(index, row) { $table.children('tbody').append(row) });
+                            $table.alternateRowColors(); // 재정렬
+                        });
+                    }
+                }); // end table sort
+            }); // end each()
+        });   // end ready()
+</script>
+
+</head>
+
+<body>
+<!-- 헤더영역 -->
+<header>
+<!-- 로고영역 -->
+<nav class="logo">
+<ul>
+<li><a href="index.html"><img src="images/home_btn.png" alt="coin"></a></li>
+<li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+<li><a href="index.html"><img src="images/x_btn.png" alt="set"></a></li>
+</ul>
+</nav>
+
+<!-- 메인메뉴 영영 -->
+<nav class="main" >
+    <ul>
+      <li><a href="index.html">메인</a></li>
+      <!--<li><a href="index02.html">앱</a></li>-->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li id="click_bar"><a href="index07.html">커뮤니티</a></li>
+    </ul>
+</nav>
+  </header>
+
+<div class="wrap03">
+
+<section>
+
+<!-- 내가작성한 댓글 선택영역 -->
+<div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">
+    	내가 작성한 댓글  ▼
+    </button>
+<div id="myDropdown" class="dropdown-content">
+	<a href="index13.html">내가 작성한 게시물</a>
+	<a href="index14.html">내가 작성한 댓글</a>
+	<a href="index15.html">내 게시글에 달린 댓글</a>
+</div>
+</div>
+<!-- -->
+
+<!-- 최근6개월 영역 -->
+<p>최근 6개월간 내가 작성한 댓글 입니다.</p>
+<!--  -->
+
+<!-- 댓글 목록영역 -->
+<table class="td">
+ <thead>
+        <tr>
+            <th class="sort-alpha">날짜▼</th>
+            <th class="sort-alpha">내용</th>
+            <th class="sort-alpha">종류▼</th>
+        </tr>
+</thead>
+ 	<tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>	
+    <tr>
+                <td>16.03.15</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr> 
+    <tr>
+                <td>16.03.16</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.04.01</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>     
+    <tr>
+                <td>16.05.02</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+    <tr>
+                <td>16.12.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+    <tr>
+                <td>16.03.03</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.10</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+    <tr>
+                <td>16.03.03</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.10</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.16</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.04.01</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+    <tr>
+                <td>16.05.02</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+    <tr>
+                <td>16.12.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td>일반</td>
+            </tr>
+    <tr>
+                <td>16.03.14</td>
+                <td>거래 완료 되었나요 ?</td>
+                <td class="vip">VIP</td>
+            </tr>
+</table>
+<!--  -->
+
+</section>
+</div>
+
+<!-- 광고 영역(class="bigbanner") -->
+<section class="bigbanner">
+	<h4>광고영역</h4>
+  	<a href="">
+    	<img src="images/ad_02.png" alt="ad_01">
+    </a>
+</section>
+<!-- --> 
+
+<!-- footer 영역 --> 
+<footer>
+  <nav>
+    <ul>
+      <li><a href="">성인마켓소개</a></li>
+      <li><a href="">광고문의</a></li>
+      <li><a href="">개인정보취급</a></li>
+      <li><a href="">이용약관</a></li>
+    </ul>
+  </nav>
+  Copyright ⓒ All right reseved by Mobipopcon
+</footer>
+<!-- --> 
+
+</body>
+</html>

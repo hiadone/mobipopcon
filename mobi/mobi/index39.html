@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script>
+<!-- 글자수 카운터 스크립트 -->	
+$(function(){
+ $('#content02').keyup(function (e){
+          var content = $(this).val();
+          
+          $('#counter').html(content.length + '/30');
+      });
+      $('#content02').keyup();
+<!-- -->
+			
+<!-- 로딩시 대메뉴의 스크롤바 위치 지정 -->
+$(function(){
+var position = $('.main ul li:last-child').offset(); //위치값(#container 의 스크롤바위치값을 변수로 지정함)	
+ 	$('html, body').animate({scrollTop : 0});
+	$('.main').animate({scrollLeft : position.left})
+	$('.submenu_01 nav ul li:nth-child(1) a').css('color' , '#345982')
+	$('.submenu_01 nav ul li:nth-child(1) a').css('font-weight' , 'bold')
+});
+});
+
+			
+</script>
+<!-- -->
+</head>
+
+<body>
+<!-- 헤더영역 -->
+<header>
+<!-- 로고영역 -->
+<nav class="logo">
+<ul>
+<li><a href="index12.html"><img src="images/home_btn.png" alt="home"></a></li>
+<li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+<li><a href="index13.html"><img src="images/x_btn.png" alt="x_btn"></a></li>
+</ul>
+</nav>
+
+<!-- 메인메뉴 영영 -->
+<nav class="main" >
+    <ul>
+      <li><a href="index.html">메인</a></li>
+     <!-- <li><a href="index02.html">앱</a></li> -->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li id="click_bar"><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- -->
+
+
+<div class="wrap03">
+<section>
+<h2>커뮤니티 > 일반<span><a href="index07.html">목록보기 ></a></span></h2>
+
+<!-- 글쓴이 정보영역 -->
+<div class="post_info">
+<h3>
+<span>[일반]</span>
+안녕하세요 가입인사 드립니다.</h3>
+<sub>작성자 : 애플파이군  |  조회:120  |  등록일:2016.12.23</sub>
+</div>
+<!-- -->
+
+
+
+<div class="textarea">
+안녕하세요 오늘 가입했습니다.<br/>
+잘부탁드립니다.
+</div>
+
+<div class="reply">
+<h2>댓글갯수 : 6</h2>
+<!--등록/댓글작성 영역-->
+<textarea name="content02" id="content02" maxlength="30" onclick="this.value=''">스팸,욕설,사용금지</textarea>
+    <div class="submit" id="right">
+    <input type="button"  value="등록">
+    </div>
+<p id="counter">###</p>
+<!-- -->
+<ul class="reply_list">
+<li><h3>같은회원이 되신걸 환영해요 ~</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+<li><h3>환영합니다. 모비월드에 오신걸 환영합니다.</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+<li><h3>앞으로 많은 활동 부탁 드립니다.</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+<li><h3>환영합니다. 모비월드에 오신걸 환영합니다.</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+<li><h3>앞으로 많은 활동 부탁 드립니다.</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+<li><h3>환영합니다. 모비월드에 오신걸 환영합니다.</h3><sub>2016.03.20 | <a href="">댓글</a></sub></li>
+</ul>
+</div>
+</section>
+
+</div>
+
+
+<!-- 광고 영역(class="bigbanner") -->
+<section class="bigbanner">
+	<h4>광고영역</h4>
+  	<a href="">
+    	<img src="images/ad_02.png" alt="ad_01">
+    </a>
+</section>
+<!-- --> 
+
+<!-- footer 영역 --> 
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">성인마켓소개</a></li>
+      <li><a href="#">광고문의</a></li>
+      <li><a href="#">개인정보취급</a></li>
+      <li><a href="#">이용약관</a></li>
+    </ul>
+  </nav>
+  Copyright ⓒ All right reseved by Mobipopcon
+</footer>
+<!-- -->
+
+
+</body>
+</html>

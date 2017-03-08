@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<!-- 이미지 슬라이드 스크립트 -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="js/jquery.bxslider.min.js"></script>
+<script src="js/jquery.fitvids.js"></script>
+<script>
+$(document).ready(function () {
+            $('.slide ul').bxSlider({
+                //work method
+                mode: 'horizontal', // 'horizontal' : 좌,우 'vertical' : 상,하 'fade' : fade in, out
+                speed: 1000, // m/s ex > 1000 = 1s
+                easing: 'ease-in-out', // 동작 가속도 css와 동일
+                slideMargin:0, // img와 img 사이 간격
+                startSlide: 0, // 시작시 로드될 이미지 (0부터시작)
+                preloadImages: 'visible', // "visible"은 보여질때 이미지를 로드, "all"로 설정하면 이미지가 모드 로드되야 작동.
+                randomStart: false, //시작시 랜덤으로 이미지 로드 여부 (boolean)
+                adaptiveHeight:true, //각 이미지의 높이에 따라 슬라이더 높이의 유동적 조절 여부
+                adaptiveHeightSpeed: 300, //adaptiveHeight 동작속도
+                video: true,//slide에 video 사용여부, 사용할 시에 plugins/jquery.fitvids.js include 필요
+                captions:false, // img 태그에 title 속성값을 사용할시, 그부분의 출력여부 단, css .bx-wrapper .bx-caption 부분 조절 필요
+
+                //responsive method
+                responsive: true,//반응형 지원 여부
+
+                touchEnabled: true,//터치스와이프 기능 사용여부
+                swipeThreshold: 50,//터치하여 스와이프 할때 변환 효과에 소모되는 시간 설정
+                oneToOneTouch: true, // fade 효과가 아닌 슬라이드는 손가락의 접지상태에 따라 슬라이드를 움직일수있다.
+                preventDefaultSwipeX: true, // onoToOneTouch 에서 true일 경우, 손가락을따라 x축으로 움직일지에 대한 여부
+                preventDefaultSwipeY:false , // onoToOneTouch 에서 true일 경우, 손가락을따라 y축으로 움직일지에 대한 여부
+
+                //control method
+                controls: true, // 좌,우 컨트롤 버튼 출력 여부
+
+                auto: true, // 자동 재생 활성화
+                autoControls:false, //자동재생 제어버튼 활성화  단, auto 모드가 활성화 되어있어야함.
+
+                autoControlsCombine:false, // 재생시 중지버튼 활성화, 중지시 재생버튼 활성화
+                pause:4000, // 자동 재생 시 각 슬라이드 별 노출 시간
+                autoStart: true, // 페이지 로드가 되면, 슬라이드의 자동시작 여부
+                autoDirection: 'next', // 자동 재생 시에 정순, 역순(prev) 방식 설정
+                autoHover: true, // 슬라이드 오버시 재생 중단 여부 (false: 오버무시) 
+                autoDelay:0, // 자동 재생 전 대기 시간 설정
+                hideControlOnEnd: false, //첫번째 슬라이드 일경우 이전 버튼 삭제, 마지막 슬라이드 일 경우 다음 버튼 삭제 단, infiniteLoop: false 일 경우만 사용 가능.
+                infiniteLoop: true,//마지막에 도달 했을시, 첫페이지로 갈 것인가 멈출것인가
+			});              
+        });
+</script>
+<!-- -->
+</head>
+
+<body>
+
+<!-- 헤더영역 -->
+<header> 
+  <!-- 로고영역 -->
+  <nav class="logo">
+    <ul>
+      <li><a href=""><img src="images/coin.png" alt="coin"></a></li>
+      <li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+      <li><a href=""><img src="images/set.png" alt="set"></a></li>
+    </ul>
+  </nav>
+  
+  <!-- 메인메뉴 영영-->
+  <nav class="main" >
+    <ul>
+      <li id="click_bar"><a href="index.html">메인</a></li>
+      <!--<li><a href="index02.html">앱</a></li>-->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- --> 
+
+<!-- 슬라이드 -->
+<section class="slide">
+  <h4>슬라이드 영역</h4>
+  <ul >
+    <li> <a href="http://www.naver.com"><img src="images/slide01.png" alt="wall01" /></a> </li>
+    <li> <a href="http://www.naver.com"><img src="images/slide02.png" alt="wall01"/></a> </li>
+    <li> <a href="http://www.naver.com"><img src="images/slide03.png" alt="wall01"/></a> </li>
+  </ul>
+  <div class="newPager"></div>
+  <div class="newAutoControl"></div>
+  <span class="btn prev"></span> <span class="btn next"></span> </section>
+
+<!-- 추천앱 -->
+<section class="swip_menu">
+  <h2>추천앱 <span> <a href="index02.html">더보기 ></a> </span> </h2>
+  <nav>
+    <ul>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+    </ul>
+  </nav>
+</section>
+<!-- --> 
+
+<!-- 추천웹툰-->
+<section class="swip_menu">
+  <h2>추천웹툰 <span> <a href="index03.html">더보기 ></a> </span> </h2>
+  <nav>
+    <ul>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/main_app01.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+    </ul>
+  </nav>
+</section>
+<!-- --> 
+
+<!-- 광고 영역 -->
+<section class="bigbanner">
+  <h4>광고영역</h4>
+  <a href="http://www.naver.com"> <img src="images/ad_01.gif" alt="ad_01"> </a> </section>
+<!-- --> 
+
+<!--최신영상 영역-->
+<section class="vod" >
+  <h2>최신영상 <span><a href="index04.html">더보기 ></a></span> </h2>
+  <nav>
+    <ul>
+      <li> <a href="https://www.tumblr.com/video/obscenestore/129705454745/700"> <img src="images/mmain/a1.jpg" alt="new_vod01">
+        <h3>검스신고 팬티안에 강제로<br/>
+          <span> 동영상종류 : 동양<br/>
+          등록일 : 2017 . 01 . 20 </span> </h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+        </a> </li>
+      <li> <a href="https://www.tumblr.com/video/d6812/133178495377/700"> <img src="images/mmain/a2.jpg" alt="new_vod02">
+        <h3>검스 신고 아파하는 그녀<br/>
+          <span> 동영상종류 : 동양<br/>
+          등록일 : 2017 . 01 . 20 </span> </h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+        </a> </li>
+      <li> <a href="https://www.tumblr.com/video/supermanshow/141477679467/700"> <img src="images/mmain/a3.jpg" alt="new_vod03">
+        <h3>격렬하게 자위하다가 줄줄<br/>
+          <span> 동영상종류 :  페티쉬<br/>
+          등록일 : 2017 . 01 . 20 </span> </h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+        </a> </li>
+      <li> <a href="https://www.tumblr.com/video/grhidegr/97143541917/700"> <img src="images/mmain/a4.jpg" alt="new_vod04">
+        <h3>청수하게 생긴 그녀 야하게<br/>
+          <span> 동영상종류 : 일본<br/>
+          등록일 : 2017 . 01 . 20 </span> </h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+        </a> </li>
+      <li> <a href="https://www.tumblr.com/video/laughing-camera/145498816199/700"> <img src="images/mmain/a9.jpg" alt="new_vod05">
+        <h3>로리로리 예쁜 요정녀<br/>
+          <span> 동영상종류 : 서양<br/>
+          등록일 : 2017 . 01 . 20 </span> </h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+        </a> </li>
+    </ul>
+  </nav>
+</section>
+<!-- --> 
+
+<!-- 일반소설 영역 -->
+<section  class="swip_menu">
+  <h2>일반소설 <span> <a href="index05.html">더보기 ></a> </span> </h2>
+  <nav>
+    <ul>
+      <li> <a href="http://www.naver.com"> <img src="images/book.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/book.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/book.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/book.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+      <li> <a href="http://www.naver.com"> <img src="images/book.png" alt="main_app01"> </a>
+        <h3> 설명글을 삽입해 주세요.</h3>
+        <!--<p> ★ 4.1 <span> 유료 </span> </p>--> 
+      </li>
+    </ul>
+  </nav>
+</section>
+<!-- --> 
+
+<!-- 무료공개 이벤트 영역 -->
+<section class="event">
+  <h2>무료공개 & 이벤트</h2>
+  <a href="http://www.naver.com"> <img src="images/event.png" alt="evnet"> </a> </section>
+<!-- --> 
+
+<!-- 인기사진 영역 -->
+<section class="photo">
+  <h2>인기사진 <span><a href="index06.html">더보기 ></a></span> </h2>
+  <nav >
+    <ul>
+      <li><a href="http://www.naver.com"><img src="images/photo_01.png" alt="photo_01"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_02.png" alt="photo_02"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_03.png" alt="photo_03"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_04.png" alt="photo_04"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_05.png" alt="photo_05"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_06.png" alt="photo_06"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_07.png" alt="photo_07"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_08.png" alt="photo_08"></a></li>
+      <li><a href="http://www.naver.com"><img src="images/photo_09.png" alt="photo_09"></a></li>
+    </ul>
+  </nav>
+</section>
+<!-- --> 
+
+<!-- 광고 영역(class="bigbanner") -->
+<section class="bigbanner">
+  <h4>광고영역</h4>
+  <a href="http://www.naver.com"> <img src="images/ad_02.png" alt="ad_01"> </a> </section>
+<!-- --> 
+
+<!-- footer 영역 -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">성인마켓소개</a></li>
+      <li><a href="#">광고문의</a></li>
+      <li><a href="#">개인정보취급</a></li>
+      <li><a href="#">이용약관</a></li>
+    </ul>
+  </nav>
+  
+  이 사이트는 성인컨텐츠 제공이 합법인 유럽, 호주, 일본 등지의<br/> 
+한글을 사용하는 사용자들을 위한 성인전용 서비스이며,<br/> 국내 사용자와
+미성년자의 출입을 금지합니다.<br/> 
+<br/> 
+Copyright ⓒ All right reseved by Mobipopcon
+
+  </footer>
+<!-- -->
+
+</body>
+</html>

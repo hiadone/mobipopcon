@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<!-- 로딩후 대메뉴 의 스크롤바 위치 지정-->
+<script>
+$(document).ready
+$(function(){
+ var position = $('.main ul li:nth-child(3)').offset(); //위치값(#container 의 스크롤바위치값을 변수로 지정함)	
+ 	$('html, body').animate({scrollTop : 0});
+	$('.main').animate({scrollLeft : position.left})
+	$('.submenu_01 nav ul li:nth-child(1) a').css('color' , '#345982')
+	$('.submenu_01 nav ul li:nth-child(1) a').css('font-weight' , 'bold')
+			
+});
+</script>
+<!-- -->
+
+<!-- 로딩후 소메뉴 의 스크롤바 위치 지정-->
+<script>
+$(document).ready
+	$(function(){
+		var menu01 = $('.submenu_01 nav ul li:nth-child(1) a')
+		var menu02 = $('.submenu_01 nav ul li:nth-child(2) a')
+		var menu03 = $('.submenu_01 nav ul li:nth-child(3) a')
+		
+		$('html, body').animate({scrollTop : 0});
+		
+		menu03.css('color','#345982')
+		menu03.css('font-weight','bold')
+		
+		menu01.css('color','#000')
+        menu01.css('font-weight','normal')
+		
+		menu02.css('color','#000')
+        menu02.css('font-weight','nomal')			
+	});	
+</script>
+<!-- -->
+</head>
+
+<body>
+<header> 
+  <!-- 로고영역 -->
+  <nav class="logo">
+    <ul>
+      <li><a href=""><img src="images/coin.png" alt="coin"></a></li>
+      <li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+      <li><a href=""><img src="images/set.png" alt="set"></a></li>
+    </ul>
+  </nav>
+  
+  <!-- 메인메뉴 영영-->
+  <nav class="main" >
+    <ul>
+      <li><a href="index.html">메인</a></li>
+      <!--<li><a href="index02.html">앱</a></li>-->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li id="click_bar"><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- 서브메뉴 영영 -->
+<section class="submenu_01">
+<h4>서브메뉴</h4>
+<nav>
+<ul>
+<li><a href="index05.html">전체</a></li>
+<li><a href="index30.html">일반소설</a></li>
+<li><a href="index31.html"><span>19</span>소설</a></li>
+</ul>
+</nav>
+</section>
+<!-- --> 
+<div class="wrap">
+<!-- 일반소설 영역(class="novel_list") -->
+<section class="novel">
+    <h2>
+    	19소설
+        <span><a href="index05.html">X</a></span>
+    </h2>
+    <ul>
+      <li><a href="">후이즈, 프랑스 도메인 실시간 등록서비스 나서 후이즈, 프랑스 도메인 실시간 등록서비스 나서</a></li>
+      <li><a href="">페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다" 페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</a></li>
+      <li><a href="">스마트폰으로 PC파일 원격제어 솔루션 출시 스마트폰으로 PC파일 원격제어 솔루션 출시</a></li>
+      <li><a href="">스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시 스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</a></li>
+      <li><a href="">음악·동영상을 광고 없이…유튜브 레드 韓 상륙</a></li>
+      <li><a href="">후이즈, 프랑스 도메인 실시간 등록서비스 나서 후이즈, 프랑스 도메인 실시간 등록서비스 나서</a></li>
+      <li><a href="">페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다" 페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</a></li>
+      <li><a href="">스마트폰으로 PC파일 원격제어 솔루션 출시 스마트폰으로 PC파일 원격제어 솔루션 출시</a></li>
+      <li><a href="">스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시 스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</a></li>
+      <li><a href="">음악·동영상을 광고 없이…유튜브 레드 韓 상륙</a></li>
+      <li><a href="">후이즈, 프랑스 도메인 실시간 등록서비스 나서 후이즈, 프랑스 도메인 실시간 등록서비스 나서</a></li>
+      <li><a href="">페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다" 페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</a></li>
+      <li><a href="">스마트폰으로 PC파일 원격제어 솔루션 출시 스마트폰으로 PC파일 원격제어 솔루션 출시</a></li>
+      <li><a href="">스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시 스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</a></li>
+      <li><a href="">음악·동영상을 광고 없이…유튜브 레드 韓 상륙</a></li>
+      <li><a href="">후이즈, 프랑스 도메인 실시간 등록서비스 나서 후이즈, 프랑스 도메인 실시간 등록서비스 나서</a></li>
+      <li><a href="">페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다" 페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</a></li>
+      <li><a href="">스마트폰으로 PC파일 원격제어 솔루션 출시 스마트폰으로 PC파일 원격제어 솔루션 출시</a></li>
+      <li><a href="">스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시 스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</a></li>
+      <li><a href="">음악·동영상을 광고 없이…유튜브 레드 韓 상륙</a></li>
+      <li><a href="">후이즈, 프랑스 도메인 실시간 등록서비스 나서 후이즈, 프랑스 도메인 실시간 등록서비스 나서</a></li>
+      <li><a href="">페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다" 페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</a></li>
+      <li><a href="">스마트폰으로 PC파일 원격제어 솔루션 출시 스마트폰으로 PC파일 원격제어 솔루션 출시</a></li>
+      <li><a href="">스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시 스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</a></li>
+      <li><a href="">음악·동영상을 광고 없이…유튜브 레드 韓 상륙</a></li>
+	</ul>
+</section>
+<!-- --> 
+
+</div>
+
+<!-- 대배너 광고 영역(class="bigbanner")--> 
+<section class="bigbanner">
+	<h4>광고영역</h4>
+  	<a href="http://www.naver.com">
+    	<img src="images/ad_02.png" alt="ad_01">
+    </a>
+</section>
+<!-- --> 
+
+<!-- footer 영역 --> 
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">성인마켓소개</a></li>
+      <li><a href="#">광고문의</a></li>
+      <li><a href="#">개인정보취급</a></li>
+      <li><a href="#">이용약관</a></li>
+    </ul>
+  </nav>
+  Copyright ⓒ All right reseved by Mobipopcon
+</footer>
+<!-- --> 
+
+</body>
+</html>

@@ -346,6 +346,4 @@ $view_folder = 'views';
  *
  * And away we go...
  */
-
 require_once BASEPATH.'core/CodeIgniter.php';
-

@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<script>
+<!-- 팝업창 -->
+function alertmsg() {
+    alert ('글자수가 초과되었습니다. 1,000자 이내로 글을 작성해 주세요.');
+}
+<!-- -->
+
+<!-- 파일업로드 -->
+$(document).ready(function(){
+   var fileTarget = $('.filebox .upload-hidden');
+
+    fileTarget.on('change', function(){
+        if(window.FileReader){
+            // 파일명 추출
+            var filename = $(this)[0].files[0].name;
+        } 
+
+        else {
+            // Old IE 파일명 추출
+            var filename = $(this).val().split('/').pop().split('\\').pop();
+        };
+
+        $(this).siblings('.upload-name').val(filename);
+    });
+
+    //preview image 
+    var imgTarget = $('.preview-image .upload-hidden');
+
+    imgTarget.on('change', function(){
+        var parent = $(this).parent();
+        parent.children('.upload-display').remove();
+
+    });
+});
+<!-- -->
+
+<!-- 글자수 카운터 스크립트 -->	
+$(function(){
+ $('.content').keyup(function (e){
+          var content = $(this).val();
+          
+          $('#counter').html(content.length + '/1000');
+      });
+      $('.content').keyup();
+<!-- -->	
+
+<!-- 로딩시 대메뉴의 스크롤바 위치 지정 -->
+var position = $('.main ul li:last-child').offset(); //위치값(#container 의 스크롤바위치값을 변수로 지정함)	
+ 	$('html, body').animate({scrollTop : 0});
+	$('.main').animate({scrollLeft : position.left})
+	$('.submenu_01 nav ul li:nth-child(1) a').css('color' , '#345982')
+	$('.submenu_01 nav ul li:nth-child(1) a').css('font-weight' , 'bold')
+
+});
+<!-- -->
+</script>
+
+
+
+</head>
+
+<body>
+<!-- 헤더영역 -->
+<header>
+<!-- 로고영역 -->
+<nav class="logo">
+<ul>
+<li><a href="index12.html"><img src="images/home_btn.png" alt="home"></a></li>
+<li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+<li><a href="index13.html"><img src="images/x_btn.png" alt="x_btn"></a></li>
+</ul>
+</nav>
+
+<!-- 메인메뉴 -->
+<nav class="main" >
+    <ul>
+      <li><a href="index.html">메인</a></li>
+      <!--<li><a href="index02.html">앱</a></li>-->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li id="click_bar"><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- -->
+
+
+<div class="wrap03">
+<section class="write">
+<h2>게시물 작성하기 <span><a href="index07.html">목록보기 ></a></span></h2>
+
+<!-- 글쓰기의 작성자 정보 -->
+<figure>
+<img src="images/setting.png" alt="setting">
+<figcaption>사용자 이름 <span>2016.03.03</span></figcaption>
+</figure>
+<!--  -->
+
+<!--제목영역 영역-->
+<div class="title">제 목</div>
+<div class="search"  id="title_txt" >
+<input type="text" value="안녕하세요" onclick="this.value=''">
+</div>
+<!-- -->
+
+
+
+<!-- 글쓰기 영역 -->
+<textarea name="content" class="content" maxlength="1000" onclick="this.value=''">스팸이나 욕설, 비방 글을 남기실 경우 법적 제지가 발생할수 있습니다.</textarea>
+<p id="counter">###</p>
+<!--  -->
+
+<!-- 파일 업로드 영역 -->
+<div class="filebox bs3-primary preview-image">
+<label for="input_file">업로드</label>
+<input class="upload-name" value="선택된 파일이 없습니다." disabled="disabled" >
+<input type="file" id="input_file" class="upload-hidden"> 
+</div>
+
+
+<!-- 글등록하기 버튼 & 팝업창 띄우기 -->
+<div class="write_btn">
+<h3><a href="javascript:alert('글자수가 초과되었습니다. 1,000자 이내로 글을 작성해 주세요')">게시물 등록하기</a></h3>
+</div>
+</section>
+</div>
+
+
+<!-- footer 영역 -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="">성인마켓소개</a></li>
+      <li><a href="">광고문의</a></li>
+      <li><a href="">개인정보취급</a></li>
+      <li><a href="">이용약관</a></li>
+    </ul>
+  </nav>
+  
+  이 사이트는 성인컨텐츠 제공이 합법인 유럽, 호주, 일본 등지의<br/> 
+한글을 사용하는 사용자들을 위한 성인전용 서비스이며,<br/> 국내 사용자와
+미성년자의 출입을 금지합니다.<br/> 
+<br/> 
+Copyright ⓒ All right reseved by Mobipopcon
+
+  </footer>
+<!-- -->
+
+
+</body>
+</html>

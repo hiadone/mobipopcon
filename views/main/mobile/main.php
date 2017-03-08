@@ -16,8 +16,8 @@ $(document).ready(function() {
             return '<span id="fancybox-title-over">Image ' + (currentIndex + 1) + ' / ' + currentArray.length + (title.length ? ' &nbsp; ' + title : '') + '</span>';
         }
     });
-
-    $('#bxslider.slide ul').bxSlider({
+    $('section.slide ul li').css('display','block');
+    $('.slide ul').bxSlider({
         //work method
         mode: 'horizontal', // 'horizontal' : 좌,우 'vertical' : 상,하 'fade' : fade in, out
         speed: 1000, // m/s ex > 1000 = 1s
@@ -54,17 +54,29 @@ $(document).ready(function() {
         autoDelay:0, // 자동 재생 전 대기 시간 설정
         hideControlOnEnd: false, //첫번째 슬라이드 일경우 이전 버튼 삭제, 마지막 슬라이드 일 경우 다음 버튼 삭제 단, infiniteLoop: false 일 경우만 사용 가능.
         infiniteLoop: true,//마지막에 도달 했을시, 첫페이지로 갈 것인가 멈출것인가
-    });
+
+        onSliderLoad: function(){
+
+          // swipedisable(document.getElementById('bxslider'));
+
+        //   $(".bxslider").parent().height($(".bxslider").height());
+           
+         //  $(".bxslider").show();
+        }
+    });   
 
 });
 </script>
+<style>
+section.slide ul li:nth-child(n+2){display:none;}
+</style>
 <!-- 슬라이드 -->
-<section class="slide" id="bxslider">
+<section class="slide">
   <h4>슬라이드 영역</h4>
   <ul >
     <li> <a href="https://www.tumblr.com/video/realsoccer1/139345588396/700"><img src="https://s3.ap-northeast-2.amazonaws.com/hiadone/uploads/manual/main_01.png" alt="main_01"  /></a> </li>
-    <li> <a href="https://www.tumblr.com/video/floydianpr0n/140155168860/700"><img src="https://s3.ap-northeast-2.amazonaws.com/hiadone/uploads/manual/main_02.png" alt="main_02" /></a> </li>
-    <li> <a href="https://www.tumblr.com/video/laughing-camera/141479256894/700"><img src="https://s3.ap-northeast-2.amazonaws.com/hiadone/uploads/manual/main_03.png" alt="main_03" /></a> </li>
+    <li> <a href="https://www.tumblr.com/video/floydianpr0n/140155168860/700"><img src="https://s3.ap-northeast-2.amazonaws.com/hiadone/uploads/manual/main_02.png" alt="main_02"  /></a> </li>
+    <li> <a href="https://www.tumblr.com/video/laughing-camera/141479256894/700"><img src="https://s3.ap-northeast-2.amazonaws.com/hiadone/uploads/manual/main_03.png" alt="main_03"  /></a> </li>
   </ul>
   <div class="newPager"></div>
   <div class="newAutoControl"></div>

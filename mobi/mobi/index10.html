@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+
+<!-- 로딩후 대메뉴 의 스크롤바 위치 지정-->
+<script>
+$(document).ready
+$(function(){
+ var position = $('.main ul li:nth-child(3)').offset(); //위치값(#container 의 스크롤바위치값을 변수로 지정함)	
+ 	$('html, body').animate({scrollTop : 0});
+	$('.main').animate({scrollLeft : position.left})			
+});
+</script>
+
+<!-- 로딩후 소메뉴-->
+<script>
+$(document).ready
+	$(function(){
+		var menu01 = $('.sub nav ul li:nth-child(3) a')
+		    menu01.css('color','#fff')
+		    menu01.css('background-color' , '#345982')
+		    menu01.css('font-weight' , 'bold')
+		
+	});	
+</script>
+<!-- -->
+
+<!-- 드롭메뉴 스크립트-->
+<script>
+$(document).ready(function(){
+    
+    var select = $("select#sel");
+    
+    select.change(function(){
+        var select_name = $(this).children("option:selected").text();
+        $(this).siblings("label").text(select_name);
+    });
+});
+</script>
+<!-- -->
+</head>
+
+<body>
+<!-- 헤더영역 -->
+<header>
+<!-- 로고영역 -->
+<nav class="logo">
+<ul>
+<li><a href="index12.html"><img src="images/coin.png" alt="coin"></a></li>
+<li><a href="index.html"><img src="images/logo.png" alt="logo"></a></li>
+<li><a href="index13.html"><img src="images/set.png" alt="set"></a></li>
+</ul>
+</nav>
+
+<!-- 메인메뉴 영영 -->
+<nav class="main" >
+    <ul>
+      <li><a href="index.html">메인</a></li>
+     <!-- <li><a href="index02.html">앱</a></li> -->
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">E-북</a></li>
+      <li><a href="index06.html">사진</a></li>
+      <li id="click_bar"><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- -->
+
+<!-- 2*2단서브메뉴 -->
+<section class="sub">
+<h4>2*2단서브메뉴</h4>
+<nav>
+<ul>
+<li><a href="index08.html">일반</a></li>
+<li><a href="index09.html">정보</a></li>
+<li><a href="index10.html">리뷰</a></li>
+<li><a href="index11.html">유머</a></li>
+</ul>
+</nav>
+</section>
+<!-- -->
+
+<div class="wrap02">
+
+<section class="subcom">
+
+<h2> 커뮤니티 > 리뷰 </h2>
+
+<!--드롭박스메뉴 영역-->
+<div id="select_box">
+      <label for="select">선택 ▼</label>
+      <select id="sel" title="select color">
+        <option >제목</option>
+        <option>내용</option>
+        <option>제목+내용</option>
+        <option>닉네임</option>
+      </select>
+</div>    
+<!-- -->
+    
+<!--검색창/검색버튼 영역-->
+<div class="search">
+      <input type="text">
+    </div>
+    <div class="submit">
+    <input type="button" value="검색">
+
+    </div>
+<!-- -->
+
+<!-- 리스트-->
+<div class="com">
+<nav>
+    	<ul>
+        	<li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+                    	<li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+            <li>
+            	<a href="">
+            		<h4>[리뷰] 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요 안녕하세요</h4>
+            			<p>사과맨 | 조회:51 | 2016.03.25 </p>
+            	</a>
+            </li>
+
+        </ul>
+    </nav>
+</div>
+<!-- --> 
+  
+<!-- 글쓰기 버튼 -->  
+<div class="write_btn">
+<h3><a href="index38.html">게시물 작성하기</a></h3>
+</div>
+
+</section>
+</div>
+
+<!-- 대배너 광고 영역(class="bigbanner")--> 
+<section class="bigbanner">
+	<figure>
+        <a href="http://www.naver.com">
+            <img src="images/ad_02.png" alt="ad_01">
+        </a>
+    </figure>
+</section>
+<!-- --> 
+
+<!-- footer 영역 -->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">성인마켓소개</a></li>
+      <li><a href="#">광고문의</a></li>
+      <li><a href="#">개인정보취급</a></li>
+      <li><a href="#">이용약관</a></li>
+    </ul>
+  </nav>
+  
+  이 사이트는 성인컨텐츠 제공이 합법인 유럽, 호주, 일본 등지의<br/> 
+한글을 사용하는 사용자들을 위한 성인전용 서비스이며,<br/> 국내 사용자와
+미성년자의 출입을 금지합니다.<br/> 
+<br/> 
+Copyright ⓒ All right reseved by Mobipopcon
+
+  </footer>
+<!-- -->
+
+
+
+
+</body>
+</html>

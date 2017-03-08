@@ -1,0 +1,251 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>mobipopcon</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="css/import.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/submenu.js"></script>
+
+<script>
+$(document).ready
+$('html, body').animate({scrollTop : 0});
+</script>
+<!-- 로딩후 소메뉴 의 스크롤바 위치 지정-->
+<script>
+$(document).ready
+	$(function(){
+		var menu01 = $('.submenu_01 nav ul li:nth-child(1)')
+		var menu02 = $('.submenu_01 nav ul li:nth-child(2)')
+		var menu03 = $('.submenu_01 nav ul li:nth-child(3)')
+		
+		
+		
+		menu01.css('color','#c7166f')
+		menu01.css('font-weight','bold')
+		
+		menu02.css('color','#000')
+        menu02.css('font-weight','normal')
+		
+		menu03.css('color','#000')
+        menu03.css('font-weight','normal')			
+	});	
+</script>
+</head>
+
+<body>
+<!-- 헤더영역 -->
+<header>
+  <h1><a href="index.html"></a></h1>
+  <h2>
+    <figure><a href="index12.html"><img src="images/ham.png" alt="ham"></a></figure>
+  </h2>
+  <nav>
+    <ul>
+      <li><a href="index.html">메인</a></li>
+      <li id="click_bar"><a href="index02.html">앱</a></li>
+      <li><a href="index03.html">웹툰</a></li>
+      <li><a href="index04.html">동영상</a></li>
+      <li><a href="index05.html">사진</a></li>
+      <li><a href="index06.html">E-북</a></li>
+      <li><a href="index07.html">커뮤니티</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- -->
+<!-- 서브메뉴 1단--> 
+<section class="submenu_01">
+  <nav>
+    <ul>
+      <li>전체</li>
+      <li>신규출시앱</li>
+      <li>추천앱</li>
+    </ul>
+  </nav>
+</section>
+<!-- -->
+
+<div class="wrap">
+  <!-- 최신모바일뉴스 영역(class="text_list") -->
+  <section class="text_list">
+    <h2> 최신모바일뉴스 </h2>
+    <ul>
+      <li><a href="#"><h4>후이즈, 프랑스 도메인 실시간 등록서비스 나서</h4><p>전자신문 | 2016.12.06</p></a></li>
+      <li><a href="#"><h4>페북 구글 트위터 MS "테러리스트 콘텐츠 막겠다"</h4><p>연합뉴스 | 2016.12.06</p></a></li>
+      <li><a href="#"><h4>스마트폰으로 PC파일 원격제어 솔루션 출시</h4><p>이데일리 | 2016-12-06</p></a></li>
+      <li><a href="#"><h4>스네일게임즈, 무협 RPG ‘초월 for Kakao` 구글 플레이 출시</h4><p>매일경제 | 2016.12.06</p></a></li>
+      <li><a href="#"><h4>음악·동영상을 광고 없이…유튜브 레드 韓 상륙</h4><p>머니투데이 | 2016.12.06</p></a></li>
+      <li><a href="#"><h4>옵토스타, '테라스토3.0' 무료보급 나서</h4><p>머니투데이 | 2016.12.06</p></a></li>
+	</ul>
+  </section>
+  <!-- --> 
+  
+  <!-- 신규출시앱 영역(class="swipe_menu") -->
+  <section class="swip_menu">
+    <h2>신규출시앱 <span><a href="http://www.naver.com">더보기 ></a></span> </h2>
+    <nav>
+      <ul>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/app_new01.png" alt="newapp_01"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/app_new02.png" alt="newapp_02"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입 합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/app_new03.png" alt="newapp_03"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/app_new04.png" alt="newapp_04"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/app_new05.png" alt="newapp_05"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+      </ul>
+    </nav>
+  </section>
+  <!-- --> 
+  
+  <!-- 광고01 영역(class="ad_01")-->
+  <section class="ad_03"> <a href="http://www.naver.com"><img src="images/ad_03.png" alt="ad_03"></a> </section>
+  <!-- --> 
+  
+  <!-- 추천앱 영역(class="swipe_menu") -->
+  <section class="swip_menu">
+    <h2>추천앱 <span><a href="http://www.naver.com">더보기 ></a></span> </h2>
+    <nav>
+      <ul>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/com_app01.png" alt="com_01"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입 합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/com_app02.png" alt="com_02"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/com_app03.png" alt="com_03"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images//com_app04.png" alt="com_04"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+        <li><a href="http://www.naver.com">
+          <figure><img src="images/com_app06.png" alt="com_06"></figure>
+          <figcaption>
+            <h3> 설명글을 삽입합니다. </h3>
+            <p> ★ 4.1 <span> 유료 </span> </p>
+          </figcaption>
+          </a></li>
+      </ul>
+    </nav>
+  </section>
+  <!-- --> 
+  
+  <!-- 베스트앱 영역 (class="best") -->
+  <section class="best">
+    <h2>베스트 앱 TOP5 <span><a href="http://www.naver.com">더보기 ></a></span> </h2>
+    <nav>
+      <ul>
+        <li> <a href="http://www.naver.com">
+          <figure><img src="images/best_app01.png" alt="best_app01"></figure>
+          <figcaption>
+            <h3>설명문구를 넣어주세요<br/>
+              설명문구를 넣기 </h3>
+            <p> ★ 4.1 <span>유료</span> </p>
+          </figcaption>
+          </a> </li>
+        <li> <a href="http://www.naver.com">
+          <figure><img src="images/best_app02.png" alt="best_app02"></figure>
+          <figcaption>
+            <h3>설명문구를 넣어주세요<br/>
+              설명문구를 넣기 </h3>
+            <p> ★ 4.1 <span>유료</span> </p>
+          </figcaption>
+          </a> </li>
+        <li> <a href="http://www.naver.com">
+          <figure><img src="images/best_app03.png" alt="best_app03"></figure>
+          <figcaption>
+            <h3>설명문구를 넣어주세요<br/>
+              설명문구를 넣기 </h3>
+            <p> ★ 4.1 <span>유료</span> </p>
+          </figcaption>
+          </a> </li>
+        <li> <a href="http://www.naver.com">
+          <figure><img src="images/best_app04.png" alt="best_app04"></figure>
+          <figcaption>
+            <h3>설명문구를 넣어주세요<br/>
+              설명문구를 넣기 </h3>
+            <p> ★ 4.1 <span>유료</span> </p>
+          </figcaption>
+          </a> </li>
+        <li> <a href="http://www.naver.com">
+          <figure><img src="images/best_app05.png" alt="best_app05"></figure>
+          <figcaption>
+            <h3>설명문구를 넣어주세요<br/>
+              설명문구를 넣기 </h3>
+            <p> ★ 4.1 <span>유료</span> </p>
+          </figcaption>
+          </a> </li>
+      </ul>
+    </nav>
+  </section>
+  <!-- --> 
+
+</div>
+
+<!-- 대배너 광고 영역(class="bigbanner") -->
+  <section class="bigbanner"> <a href="http://www.naver.com"><img src="images/ad_02.png" alt="ad_01"></a> </section>
+<!-- --> 
+
+<!-- footer 영역 -->
+  <footer>
+  <nav>
+    <ul>
+      <li><a hreg="#">성인마켓소개</a></li>
+      <li><a hreg="#">광고문의</a></li>
+      <li><a hreg="#">개인정보취급</a></li>
+      <li><a hreg="#">이용약관</a></li>
+    </ul>
+  </nav>
+  Copyright ⓒ All right reseved by Mobipopcon
+</footer>
+
+</body>
+</html>
