@@ -83,8 +83,8 @@ $query_builder = TRUE;
 */
 $db['default'] = array(
 	//'dsn'	=> 'mysql:host=localhost;dbname=yourdatabasenamehere',
-	'hostname' => 'hiadone-m.cwvs02kjjoti.ap-northeast-2.rds.amazonaws.com',
-	'username' => 'HIADONE_M',
+	'hostname' => 'secretdb.ctq3l0kp2mch.ap-northeast-1.rds.amazonaws.com',
+	'username' => 'root',
 	'password' => 'hi09281211',
 	'database' => 'HIADONE_M',
 	'dbdriver' => 'mysqli',
