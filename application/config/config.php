@@ -670,5 +670,5 @@ $config['s3Key']    = 'AKIAIKZADZNZOHBRENRA';
 $config['s3Secret'] = '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';
 $config['version']  = 'latest';
 $config['region']   = 'ap-northeast-1';
-$config['bucket']   = 'neosecret';
+$config['bucket']   = 'mobipopcon';
 $config['s3_url']   = 'https://s3-'.$config['region'].'.amazonaws.com/'.$config['bucket'].'/';
