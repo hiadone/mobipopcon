@@ -233,7 +233,9 @@ class Board extends CI_Controller
         $postfiles = $this->CI->Post_file_model->get('', '', $deletewhere);
         if ($postfiles) {
             foreach ($postfiles as $postfile) {
-                @unlink(config_item('uploads_dir') .  '/post/' . element('pfi_filename', $postfile));
+                if(element('file_storage',$postfile)=="S3")
+                    $this->CI->aws->deleteObject(config_item('uploads_dir') . '/post/'.$postfile['pfi_filename']);
+                else @unlink(config_item('uploads_dir') .  '/post/' . element('pfi_filename', $postfile));
             }
         }
 

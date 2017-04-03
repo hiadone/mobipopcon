@@ -1625,7 +1625,9 @@ class Board_write extends CB_Controller
                                 if ((int) element('post_id', $oldpostfile) !== (int) element('post_id', $post)) {
                                     alert('잘못된 접근입니다');
                                 }
-                                @unlink(config_item('uploads_dir') .  '/post/' . element('pfi_filename', $oldpostfile));
+                                if(element('file_storage',$oldpostfile)=="S3")
+                                    $this->aws->deleteObject(config_item('uploads_dir') . '/post/'.$oldpostfile['pfi_filename']);
+                                else @unlink(config_item('uploads_dir') .  '/post/' . element('pfi_filename', $oldpostfile));
 
                                 $uploadfiledata2[$i]['pfi_id'] = $i;
                                 $uploadfiledata2[$i]['pfi_filename'] = cdate('Y') . '/' . cdate('m') . '/' . element('file_name', $filedata);
@@ -2003,7 +2005,7 @@ class Board_write extends CB_Controller
                         if ( ! element('post_id', $oldpostfile) OR (int) element('post_id', $oldpostfile) !== (int) element('post_id', $post)) {
                             alert('잘못된 접근입니다.');
                         }
-                        if($this->use_file_storage=="S3")
+                        if(element('file_storage',$oldpostfile)=="S3")
                             $this->aws->deleteObject(config_item('uploads_dir') . '/post/'.$oldpostfile['pfi_filename']);
                         else @unlink(config_item('uploads_dir') .  '/post/' . element('pfi_filename', $oldpostfile));
                         $this->Post_file_model->delete($key);
