@@ -1188,6 +1188,7 @@ class Board_post extends CB_Controller
                 if (element('use_gallery_list', $board)) {
                     if($this->cbconfig->item('use_file_storage') == "S3"){
                         if (element('post_image', $val)) {
+                            
                             $filewhere = array(
                                 'post_id' => element('post_id', $val),
                                 'pfi_is_image' => 1,

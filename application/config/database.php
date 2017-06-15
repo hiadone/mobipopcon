@@ -83,10 +83,10 @@ $query_builder = TRUE;
 */
 $db['default'] = array(
 	//'dsn'	=> 'mysql:host=localhost;dbname=yourdatabasenamehere',
-	'hostname' => 'secretdb.ctq3l0kp2mch.ap-northeast-1.rds.amazonaws.com',
-	'username' => 'root',
+	'hostname' => 'secretrds.ctq3l0kp2mch.ap-northeast-1.rds.amazonaws.com',
+	'username' => 'secret',
 	'password' => 'hi09281211',
-	'database' => 'HIADONE_M',
+	'database' => 'mobipopcon',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => 'cb_',
 	'pconnect' => FALSE,
